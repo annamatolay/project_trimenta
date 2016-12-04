@@ -1,0 +1,39 @@
+<!--Created by Matolay Pál-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+
+    <!-- Latest compiled and minified Jquery -->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+<div id="usrLogin" class="container-fluid center" style="display: none">
+    <h1 class="container-fluid text-center">Bejelentkezés</h1>
+    <form method="post" >
+        <h6>Kiszolgáló címe</h6>
+        <input id="usrHA" name="hostAddress" type="text" required="required" placeholder="Kiszolgáló címe" value="" />
+        <h6>Felhasználó név</h6>
+        <input id="usrN" name="userName" type="text" required="required" placeholder="Felhasználó név" value="" />
+        <h6>Jelszó</h6>
+        <input id="usrP" name="password" type="password" required="required" placeholder="Jelszó" />
+        <br/><br/><br/>
+        <button id="usrLoginBut" href="#">Mentés</button>
+    </form>
+</div>
+<button id="index" style="display: none">Főoldal</button>
+<div id="usrWelcome" style="display: none">
+	<button id="usrSetBut">Beállítások</button>
+    <button id="usrLogoutBut" href="#">Kijelentkezés</button>
+</div>
+
+<script src="js/main.js"></script>
+<script src="js/model/user.js"></script>
+<script src="js/controller/userController.js"></script>
+</body>
+</html>
