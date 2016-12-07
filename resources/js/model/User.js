@@ -3,18 +3,22 @@
  */
 
 function User() {
+    var json = new JsonCtrl();
 
     this.setUser = function () {
         this.hostAddress = $("input[name=hostAddress]").val();
         this.userName = $("input[name=userName]").val();
         this.password = getPwd();
         if ((this.hostAddress!="")&&(this.userName!="")&&(this.password!="")){
-            localStorage.setItem("user", JSON.stringify(this));
+            json.setOption("set");
+            json.setObject(this);
+            json.work("user");
         }
     };
 
     this.getUser = function () {
-        var data = JSON.parse(localStorage.getItem("user"));
+        json.setOption("get");
+        var data = json.work("user");
         if(data){
             this.hostAddress = data.hostAddress;
             this.userName = data.userName;

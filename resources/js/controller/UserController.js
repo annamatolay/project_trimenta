@@ -9,7 +9,8 @@ function UserController() {
         if (!user.getUser()) {
             $("#usrLogin").show();
         } else {
-            $("#usrWelcome").show().append("Üdvözöllek, "+user.userName+"!");
+            $("#usrWelcome").append("Üdvözöllek, "+user.userName+"!");
+            $(".user-board").show();
         }
     };
 
@@ -31,9 +32,10 @@ function UserController() {
             $("#usrLogin").show();
             $("#index").show();
             $("#usrSetBut").hide();
-            $("#usrWelcome").hide();
+            $(".user-board").hide();
             $("#usrHA").attr("value", user.hostAddress);
             $("#usrN").attr("value", user.userName);
+            // $("#loginText").hide();
         });
     }
 
