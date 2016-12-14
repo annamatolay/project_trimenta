@@ -3,21 +3,20 @@
  */
 
 function User() {
-    var json = new JsonCtrl();
 
     this.setUser = function () {
         this.hostAddress = $("input[name=hostAddress]").val();
         this.userName = $("input[name=userName]").val();
         this.password = getPwd();
         if ((this.hostAddress!="")&&(this.userName!="")&&(this.password!="")){
-            json.setOption("set");
+            var json = new JsonCtrl("set");
             json.setObject(this);
             json.work("user");
         }
     };
 
     this.getUser = function () {
-        json.setOption("get");
+        var json = new JsonCtrl("get");
         var data = json.work("user");
         if(data){
             this.hostAddress = data.hostAddress;
@@ -27,11 +26,8 @@ function User() {
         }
     };
 
-
-
 	var getPwd = function () {
 		var pwd = $("input[name=password]").val();
-		// +salt(!)
 		return pwd.hashCode()	
 	};
 
