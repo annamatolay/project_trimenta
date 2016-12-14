@@ -21,7 +21,6 @@ function WorkController() {
             var data = workProcess.load();
             console.log(data);
             for (var i=0;i<data.length;i++) {
-                console.log("quantity: "+data[i].quantity+" name: "+data[i].name);
                 $("#workProc").append(data[i].quantity+'<button>'+data[i].name+'</button>')
             }
         })
