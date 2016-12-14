@@ -2,30 +2,27 @@
  * Created by Matolay Pál
  */
 
-function JsonCtrl() {
-    this.option = null;
+function JsonCtrl(option) {
+    this.option = option;
     this.object = null;
-    this.setOption = function (option) {
-        this.option = option;
-    };
 
     this.setObject = function (object) {
         this.object = object;
     };
 
     this.work = function (key) {
-        if(this.option==="set"){
-            localStorage.setItem(key, JSON.stringify(this.object));
-        } if (this.option==="get"){
-            return JSON.parse(localStorage.getItem(key));
+        switch (this.option){
+            case "set":
+                if(this.object===null) {
+                    console.log("Error: object is null!");
+                    return null;
+                }
+                localStorage.setItem(key, JSON.stringify(this.object));
+                break;
+            case "get":
+                return JSON.parse(localStorage.getItem(key));
+            default:
+                console.log("Error: invalid option!")
         }
-
-    };
-
-    // switch (option){
-        // case "set": setJson();
-        // case "get": getJson();
-        // default: alert("invalid argumetn!")
-    // }
-
+    }
 }
