@@ -5,16 +5,15 @@
     <meta charset="UTF-8">
     <title>Home</title>
 
-    <!-- Latest compiled and minified Jquery -->
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-
-    <!-- Latest compiled and minified JavaScript -->
+    <!-- jQuery link -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- JavaScript link -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
+    <!-- scripts -->
 </head>
 <body>
 <div id="usrLogin" class="container-fluid center" style="display: none">
-    <h1 class="container-fluid text-center">Bejelentkezés</h1>
+    <h1 id="loginText" class="container-fluid text-center">Bejelentkezés</h1>
     <form method="post" >
         <h6>Kiszolgáló címe</h6>
         <input id="usrHA" name="hostAddress" type="text" required="required" placeholder="Kiszolgáló címe" value="" />
@@ -27,13 +26,31 @@
     </form>
 </div>
 <button id="index" style="display: none">Főoldal</button>
-<div id="usrWelcome" style="display: none">
+<div id="usrWelcome" class="user-board" style="display: none">
 	<button id="usrSetBut">Beállítások</button>
     <button id="usrLogoutBut" href="#">Kijelentkezés</button>
+    <button id="newWBut">Új munkafolyamat</button>
+    <button id="dailyProcBut">Napi haladás</button>
+</div>
+<div id="newWorkProc" style="display: none">
+    <br>
+    <h6>Munkafolyamat neve</h6>
+    <input id="wrkN" name="workName" type="text" required="required" placeholder="Munkafolyamat neve" value="" />
+    <h6>Elvárt mennyiség</h6>
+    <input id="WrkE" name="expected" type="number" required="required" placeholder="0">
+    <button id="workSaveBut" href="#">Mentés</button>
 </div>
 
-<script src="js/main.js"></script>
-<script src="js/model/user.js"></script>
-<script src="js/controller/userController.js"></script>
+<div id="workProc">
+
+</div>
+
+
+<script src="js/Main.js"></script>
+<script src="js/model/User.js"></script>
+<script src="js/model/WorkProcess.js"></script>
+<script src="js/controller/UserController.js"></script>
+<script src="js/controller/WorkController.js"></script>
+<script src="js/controller/JsonController.js"></script>
 </body>
 </html>
