@@ -31,12 +31,12 @@ function UserController() {
         $("#usrSetBut").click(function() {
             $("#usrLogin").show();
             $("#index").show();
+            $("#loginText").hide();
             $("#usrSetBut").hide();
             $(".user-board").hide();
+            $("#workProc").hide();
             $("#usrHA").attr("value", user.hostAddress);
             $("#usrN").attr("value", user.userName);
-            // $("#loginText").hide();
         });
     }
-
 }
