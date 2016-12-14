@@ -2,7 +2,6 @@
  * Created by Matolay Pál
  */
 
-//TODO[2]: working with local json files
 
 $(document).ready(function () {
 
@@ -15,5 +14,9 @@ $(document).ready(function () {
     usrC.logInHanlder();
     usrC.logOutHandler();
     usrC.userSetting();
+
+    var workC = new WorkController();
+    workC.addWorkProcess();
+    workC.showDailyProcess();
 
 });
