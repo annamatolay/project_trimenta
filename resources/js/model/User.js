@@ -4,6 +4,7 @@
 
 function User() {
 
+    // create json from the user data
     this.setUser = function () {
         this.hostAddress = $("input[name=hostAddress]").val();
         this.userName = $("input[name=userName]").val();
@@ -15,6 +16,7 @@ function User() {
         }
     };
 
+    // get object from json
     this.getUser = function () {
         var json = new JsonCtrl("get");
         var data = json.work("user");
@@ -26,6 +28,7 @@ function User() {
         }
     };
 
+    //"well-secured" password storing
 	var getPwd = function () {
 		var pwd = $("input[name=password]").val();
 		return pwd.hashCode()	
