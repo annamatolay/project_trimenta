@@ -40,7 +40,7 @@
     </div>
 </nav>
 
-
+<!--Here is the user form-->
 <div id="usrLogin" class="container-fluid center" style="display: none">
     <h1 id="loginText" class="container-fluid text-center">Bejelentkezés</h1>
 
@@ -60,12 +60,11 @@
             <input id="usrP" name="password" type="password" required="required" placeholder="Jelszó"
                    class="form-control"/>
         </div>
-        <!--id="usrLoginBut"-->
         <button id="usrLoginBut" class="btn btn-primary">Mentés</button>
     </form>
 </div>
 
-
+<!--new work process form-->
 <div id="newWorkProc" style="display: none" class="container-fluid center">
     <form method="post">
         <div class="form-group">
@@ -81,11 +80,12 @@
     </form>
 </div>
 
+<!--exist wrk process container-->
 <div>
     <ul id="workProc" style="display: none" class=" list-group"></ul>
 </div>
 
-
+<!--modal "template"-->
 <div id="myModal" class="modal fade" role="dialog">
     <div class="modal-dialog">
         <!-- Modal content-->
@@ -100,6 +100,7 @@
     </div>
 </div>
 
+<!--import some logic-->
 <script src="js/Main.js"></script>
 <script src="js/model/User.js"></script>
 <script src="js/model/WorkProcess.js"></script>

@@ -2,6 +2,7 @@
  * Created by Matolay Pál
  */
 
+// one mechanic for all other controller, what work with a (or more) json:
 function JsonCtrl(option) {
     this.option = option;
     this.object = null;
