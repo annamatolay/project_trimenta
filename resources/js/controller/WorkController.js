@@ -46,7 +46,7 @@ function WorkController() {
             }
 
             $("#workProc").append('<li><button type="button" class="'+color+'"  value="'+i+
-                '" data-toggle="modal" data-target="#myModal">' + quantity+" "+data[i].name+'</button>');
+                '" data-toggle="modal" data-target="#myModal">'+data[i].name+'</button>');
         }
 
         $(document).on("click", "button", function(){
@@ -55,6 +55,7 @@ function WorkController() {
                 $("#modalTitle").empty().append('<h4 class="modal-title">Munkafolyamat neve: '+data[index].name+'</h4>');
                 $("#modalBody").empty().append(
                     "Létrehozás Dátuma: "+data[index].datum+"<br>"+
+                    "Mennyiség: "+quantity+"<br>"+
                     "Elvárt mennyiség: "+data[index].excepted);
                 $("#modalFooter").empty().append('<button id="saveQuantBut" type="button" class="btn btn-default" ' +
                     'data-dismiss="modal" value="'+index+'">Mentés</button>')
