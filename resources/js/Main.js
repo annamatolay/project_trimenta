@@ -2,10 +2,9 @@
  * Created by Matolay Pál
  */
 
-
 $(document).ready(function () {
 
-    $("#index").click(function() {
+    $(".homeBut").click(function() {
         location.reload();
     });
 
@@ -18,5 +17,6 @@ $(document).ready(function () {
     var workC = new WorkController();
     workC.addWorkProcess();
     workC.showDailyProcess();
+    workC.saveWorkQuantity();
 
 });
