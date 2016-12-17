@@ -60,14 +60,18 @@ function WorkController() {
                     'data-dismiss="modal" value="'+index+'">Mentés</button>')
             }
         });
+
+        this.saveWorkQuantity = function () {
+            var allProcess = workProcess.load();
+            $(document).on("click", "#saveQuantBut", function () {
+                var index = parseInt(this.value);
+                allProcess[index].quantity += 1;
+                console.log(allProcess[index]);
+                var json = new JsonCtrl("set");
+                json.setObject(allProcess);
+                json.work("work");
+                location.reload();
+            });
+        }
     };
 }
-//
-// >>>>>>> Stashed changes
-// $("#dailyProcBut").click(function () {
-//     var data = workProcess.load();
-//     console.log(data);
-//     for (var i=0;i<data.length;i++) {
-//         $("#workProc").append(data[i].quantity+'<button>'+data[i].name+'</button>')
-//     }
-// })

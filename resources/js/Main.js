@@ -18,5 +18,6 @@ $(document).ready(function () {
     var workC = new WorkController();
     workC.addWorkProcess();
     workC.showDailyProcess();
+    workC.saveWorkQuantity();
 
 });
