@@ -5,7 +5,7 @@
 
 $(document).ready(function () {
 
-    $("#index").click(function() {
+    $(".homeBut").click(function() {
         location.reload();
     });
 

@@ -9,7 +9,7 @@ function UserController() {
         if (!user.getUser()) {
             $("#usrLogin").show();
         } else {
-            $("#usrWelcome").append("Üdvözöllek, "+user.userName+"!");
+            $("#usrWelcome").append("<p>Üdvözöllek, "+user.userName+"!</p>");
             $(".user-board").show();
         }
     };
@@ -29,10 +29,10 @@ function UserController() {
 
     this.userSetting = function () {
         $("#usrSetBut").click(function() {
+            $(".homeBut").show();
             $("#usrLogin").show();
             $("#index").show();
             $("#loginText").hide();
-            $("#usrSetBut").hide();
             $(".user-board").hide();
             $("#workProc").hide();
             $("#usrHA").attr("value", user.hostAddress);
