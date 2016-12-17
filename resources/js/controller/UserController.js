@@ -2,6 +2,7 @@
  * Created by Matolay Pál
  */
 
+// mostly related visual (hide/show)
 function UserController() {
     var user = new User();
 
@@ -22,6 +23,7 @@ function UserController() {
 
     this.logOutHandler = function () {
         $("#usrLogoutBut").click(function() {
+            // after logout, clear the user data
             localStorage.removeItem("user");
             location.reload();
         })

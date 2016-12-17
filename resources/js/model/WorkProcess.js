@@ -9,6 +9,7 @@ function  WorkProcess() {
     this.excepted = null;
     this.quantity = 0;
 
+    // this is necessary for the datum attribute:
     this.getDatum = function () {
         var today = new Date();
         var dd = today.getDate();
@@ -28,11 +29,13 @@ function  WorkProcess() {
 
     this.datum = this.getDatum();
 
+    // get a list from localStorage
     this.load = function () {
         var json = new JsonCtrl("get");
         return json.work("work");
     };
 
+    // saving all work type.. or create an empty array
     this.save = function () {
         allProcess = this.load();
         if (!allProcess) {
