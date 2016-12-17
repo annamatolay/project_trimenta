@@ -10,11 +10,11 @@
     <!-- JavaScript link -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-    <!--&lt;!&ndash; Latest compiled and minified CSS &ndash;&gt;-->
-    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>-->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
 
-    <!--&lt;!&ndash; Optional theme &ndash;&gt;-->
-    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"/>-->
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"/>
 
 </head>
 <body>
@@ -29,10 +29,9 @@
         <input id="usrP" name="password" type="password" required="required" placeholder="Jelszó" />
         <br/><br/><br/>
         <button id="usrLoginBut" href="#">Mentés</button>
+        <button class="homeBut">Főoldal</button>
     </form>
 </div>
-
-<button id="index" style="display: none">Főoldal</button>
 
 <div id="usrWelcome" class="user-board" style="display: none">
 	<button id="usrSetBut">Beállítások</button>
@@ -48,9 +47,24 @@
     <h6>Elvárt mennyiség</h6>
     <input id="WrkE" name="expected" type="number" required="required" placeholder="0">
     <button id="workSaveBut" href="#">Mentés</button>
+    <button class="homeBut" >Főoldal</button>
 </div>
 
-<div id="workProc"></div>
+<div id="workProc" style="display: none"></div>
+
+<div id="myModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header" id="modalTitle">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body" id="modalBody"></div>
+            <div class="modal-footer" id="modalFooter"></div>
+        </div>
+
+    </div>
+</div>
 
 <script src="js/Main.js"></script>
 <script src="js/model/User.js"></script>
