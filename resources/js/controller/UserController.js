@@ -30,10 +30,10 @@ function UserController() {
     this.userSetting = function () {
         $("#usrSetBut").click(function() {
             $("#usrLogin").show();
-            $("#index").show();
             $("#loginText").hide();
             $("#usrSetBut").hide();
             $(".user-board").hide();
+            $("#newWorkProc").hide();
             $("#workProc").hide();
             $("#usrHA").attr("value", user.hostAddress);
             $("#usrN").attr("value", user.userName);
